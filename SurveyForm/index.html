@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey form</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">Nav</script>
+
+</head>
+<body>
+    <div>
+        <h1 id="title">
+            Coffee beans survey form
+        </h1>
+        <p id="description">
+            Give us your toughts on our best coffee beans
+        </p>
+    </div>
+    <form action="" id="survey-form">
+
+            <div>
+                <label for="" id="name-label">Name:</label>
+                <input type="text" class="input-text" id="name" placeholder="Enter your name" required>
+            </div>
+            <div>
+                <label for="" id="email-label">Email:</label>
+                <input type="email" class="input-text" id="email" placeholder="Enter your email" required>
+            </div>
+            <div>
+                <label for="" id="number-label">Age:</label>
+                <input type="number" class="input-text" min="18" max="200" name="age" id="number" placeholder="Enter your age">
+            </div>
+
+            <div>
+                <label for="">Coffee experience:</label>
+                <select name="" id="dropdown">
+                    <option name="experience" value="coffee_experience">1 year</option>
+                    <option name="experience" value="coffee_experience">2 years</option>
+                    <option name="experience" value="coffee_experience">3+ years</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="">Would you recommend our coffee:</label>
+                <br>
+                <label for="">
+                    <input type="radio" class="input-radio" value="evaluation" name="agree"> Heck yea'
+                </label>
+                <label for="">
+                    <input type="radio" class="input-radio" value="evaluation" name="agree"> Maybe
+                </label>
+                <label for="">
+                    <input type="radio" class="input-radio" value="evaluation" name="agree"> Nahhh
+                </label>
+                </div>
+                    <br>
+            
+            <div>
+            <label for="">Which of the following would you like us to introduce?</label>
+            <br>
+            
+                <label for="">
+                    <input type="checkbox" class="input-checkbox" value="Beans" name="Beans" id=""> Liberica
+                </label>
+
+                <label for="">
+                    <input type="checkbox" class="input-checkbox" value="Beans" name="beans" id=""> Peaberry beans
+                </label>
+
+                <label for="">
+                    <input type="checkbox" class="input-checkbox" value="Beans" name="beans" id=""> Dark Roast Sumatra Mandheling Beans
+                </label>
+
+                <label for="">
+                    <input type="checkbox" class="input-checkbox" value="Beans" value="Beans" name="beans" id=""> Sulawesi Toraja Coffee beans
+                </label>
+
+                <label for="">
+                    <input type="checkbox" class="input-checkbox" value="Beans" name="beans" id=""> Central American Geisha Coffee Beans
+                </label>
+            </div>
+            <br>
+
+            <div>
+                <label for="" id="textarea-label">Anything to add?</label>
+                <textarea name="" id="textarea" rows="2" disabled>Share your ideas with us...</textarea>
+            </div>
+            <hr>
+            <br>
+        <input type="submit" id="submit" value="Submit">
+
+
+    </form>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">Nav</script>
+</body>
+</html>
