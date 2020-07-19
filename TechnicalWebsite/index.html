@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Page</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>
+             PHP Documentation
+        </header>
+        <ul>
+            <li><a class="nav-link" href="#PHP_Control_Structures">PHP Control Structures</a></li>
+            <li><a class="nav-link" href="#Functions">Functions</a></li>
+            <li><a class="nav-link" href="#Classes_and_Objects">Classes and Objects</a></li>
+            <li><a class="nav-link" href="#Expressions">Expressions</a></li>
+            <li><a class="nav-link" href="#Operators">Operators</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="PHP_Control_Structures">
+            <header>
+
+                    PHP Control Structures
+
+            </header>
+            <article>
+                <p>
+                    (PHP 4, PHP 5, PHP 7)
+                    The if construct is one of the most important features of many languages, PHP included. It allows for conditional execution of code fragments. PHP features an if structure that is similar to that of C:
+                    <br>
+                    <code>
+                        if (expr) <br>
+                        &nbsp;&nbsp statement
+                    </code>
+                        
+                </p>
+                <p>
+                    Control structurs consist of:
+                </p>
+                <ul>
+                    <li>if</li>
+                    <li>elseif</li>
+                    <li>do</li>
+                    <li>while..do</li>
+                    <li>for</li>
+                    <li>foreach</li>
+                </ul>
+                <pre>
+                    <code>
+                        $i = 1;
+                        while ($i &lt;= 10) {
+                            echo $i++;          /* the printed value would be
+                                                $i before the increment
+                                                (post-increment) */
+                        }
+                    </code>
+                    <code>
+                        $i = 1;
+                        while ($i &lt;= 10):
+                            echo $i;
+                            $i++;
+                        endwhile;
+                        ?&gt;
+                    </code>
+                </pre>
+
+
+            </article>
+            <hr>
+        </section>
+        <section class="main-section" id="Functions">
+            <header>
+
+                    Functions
+            </header>
+            <article>
+                <p>
+                    Functions can be:
+                </p>
+                <ul>
+                    <li>Predefined</li>
+                    <li>User-defined</li>
+                </ul>
+                <p>
+                    Information may be passed to functions via the argument list, which is a comma-delimited list of expressions. The arguments are evaluated from left to right. 
+                    By default, function arguments are passed by value (so that if the value of the argument within the function is changed, it does not get changed outside of the function). To allow a function to modify its arguments, they must be passed by reference.
+                    To have an argument to a function always passed by reference, prepend an ampersand (&) to the argument name in the function definition: 
+                </p>
+                <p>
+                    Any valid PHP code may appear inside a function, even other functions and class definitions.
+                    Function names follow the same rules as other labels in PHP. A valid function name starts with a letter or underscore, followed by any number of letters, numbers, or underscores. As a regular expression, it would be expressed thus: ^[a-zA-Z_\x80-\xff][a-zA-Z0-9_\x80-\xff]*$. 
+                </p>
+                <pre>
+                    <code>
+                        &lt;?php
+                        function foo($arg_1, $arg_2, /* ..., */ $arg_n)
+                        {
+                            echo "Example function.\n";
+                            return $retval;
+                        }
+                        ?&gt;
+                    </code>
+                </pre>
+            </article>
+            <hr>
+        </section>
+        <section class="main-section" id="Classes_and_Objects">
+            <header>
+
+                    Classes and Objects
+
+            </header>
+            <article>
+                <p>
+                    As of PHP 5, PHP includes a complete object model. Some of its features are: visibility, abstract and final classes and methods, additional magic methods, interfaces, cloning and typehinting.
+                    PHP treats objects in the same way as references or handles, meaning that each variable contains an object reference rather than a copy of the entire object.
+                </p>
+                <p>
+                    Basic class definitions begin with the keyword class, followed by a class name, followed by a pair of curly braces which enclose the definitions of the properties and methods belonging to the class.
+                    The class name can be any valid label, provided it is not a PHP reserved word. A valid class name starts with a letter or underscore, followed by any number of letters, numbers, or underscores. As a regular expression, it would be expressed thus: ^[a-zA-Z_\x80-\xff][a-zA-Z0-9_\x80-\xff]*$.
+                    A class may contain its own constants, variables (called "properties"), and functions (called "methods"). 
+                </p>
+                <p>
+                    Example:
+                </p>
+                <pre>
+                    <code>
+                        &lt;?php
+                            class SimpleClass
+                            {
+                                // property declaration
+                                public $var = 'a default value';
+    
+                                // method declaration
+                                public function displayVar() {
+                                echo $this-&gt;var;
+                                }
+                            }
+                        ?&gt;
+                    </code>
+                </pre>
+                
+            </article>
+            <hr>
+        </section>
+        <section class="main-section" id="Expressions">
+            <header>
+
+                    Expressions
+
+            </header>
+            <article>
+                <p>
+                    Expressions are the most important building blocks of PHP. In PHP, almost anything you write is an expression. The simplest yet most accurate way to define an expression is "anything that has a value".
+
+                    The most basic forms of expressions are constants and variables. When you type "$a = 5", you're assigning '5' into $a. '5', obviously, has the value 5, or in other words '5' is an expression with the value of 5 (in this case, '5' is an integer constant).
+                    
+                    After this assignment, you'd expect $a's value to be 5 as well, so if you wrote $b = $a, you'd expect it to behave just as if you wrote $b = 5. In other words, $a is an expression with the value of 5 as well. If everything works right, this is exactly what will happen. 
+
+                </p>
+                <p>
+                    PHP takes expressions much further, in the same way many other languages do. 
+                    PHP is an expression-oriented language, in the sense that almost everything is an expression. 
+                    Consider the example we've already dealt with, '$a = 5'. 
+                    It's easy to see that there are two values involved here, the value of the integer constant '5', and the value of $a which is being updated to 5 as well. 
+                    But the truth is that there's one additional value involved here, and that's the value of the assignment itself. 
+                    The assignment itself evaluates to the assigned value, in this case 5. In practice, it means that '$a = 5', regardless of what it does, is an expression with the value 5. 
+                    Thus, writing something like '$b = ($a = 5)' is like writing '$a = 5; $b = 5;' (a semicolon marks the end of a statement). 
+                    Since assignments are parsed in a right to left order, you can also write '$b = $a = 5'. 
+
+                </p>
+                <p>
+                    Slightly more complex examples for expressions are functions. For instance, consider the following function: 
+                </p>
+                <pre>
+                    <code>
+
+                        &lt;?php
+                            function foo ()
+                            {
+                                return 5;
+                            }
+                        ?&gt;
+
+                    </code>
+                </pre>
+            </article>
+            <hr>
+        </section>
+        <section class="main-section" id="Operators">
+            <header>
+
+                    Operators
+
+            </header>
+            <article>
+                <p>
+                    An operator is something that takes one or more values (or expressions, in programming jargon) and yields another value (so that the construction itself becomes an expression).
+
+                    Operators can be grouped according to the number of values they take. Unary operators take only one value, for example ! (the logical not operator) or ++ (the increment operator). Binary operators take two values, such as the familiar arithmetical operators + (plus) and - (minus), and the majority of PHP operators fall into this category. Finally, there is a single ternary operator, ? :, which takes three values; this is usually referred to simply as "the ternary operator" (although it could perhaps more properly be called the conditional operator).
+                    
+                    A full list of PHP operators follows in the section Operator Precedence. The section also explains operator precedence and associativity, which govern exactly how expressions containing several different operators are evaluated. 
+
+                </p>
+                <p>
+                    Operators are:
+                </p>
+                <ul>
+                    <li>Arithmetic Operators</li>
+                    <li>Assignment Operators</li>
+                    <li>Comparison Operators</li>
+                    <li>Execution Operators</li>
+                    <li>Logical Operators</li>
+                    <li>Array Operators</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
